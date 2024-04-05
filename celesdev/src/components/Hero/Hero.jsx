@@ -6,10 +6,16 @@ import {
   SkillsStyled,
   ContainerButtonStyled,
   ButtonStyled,
+  ButtonLinkStyled,
 } from "./HeroStyles";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const handleDownloadCV = () => {
+    const downloadCV = "/curriculum.pdf";
+    window.open(downloadCV);
+  };
+
   return (
     <>
       <ContainerHeroStyled>
@@ -21,7 +27,7 @@ const Hero = () => {
             will be able to learn a little about my skills and the projects I
             have worked on.
           </p>
-          <img src="/cv.jpeg" alt="" />
+          <img src="/cv.jpeg" alt="cv" />
         </ContainerAboutStyled>
         <ContainerSkillsStyled>
           <h4>Skills</h4>
@@ -65,9 +71,8 @@ const Hero = () => {
           </SkillsStyled>
         </ContainerSkillsStyled>
         <ContainerButtonStyled>
-          <ButtonStyled>My projects</ButtonStyled>
-
-          <ButtonStyled>Download CV </ButtonStyled>
+          <ButtonLinkStyled to="/Projects">My projects</ButtonLinkStyled>
+          <ButtonStyled onClick={handleDownloadCV}>Download CV </ButtonStyled>
         </ContainerButtonStyled>
       </ContainerHeroStyled>
     </>

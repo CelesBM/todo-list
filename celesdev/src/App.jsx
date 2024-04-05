@@ -1,14 +1,10 @@
-import { useState } from "react";
-import "./App.css";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
+import Router from "./Router/Router";
 import { GlobalStyles } from "./GlobalStyles/GlobalStyles";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
+      <Router />
       <GlobalStyles />
     </>
   );

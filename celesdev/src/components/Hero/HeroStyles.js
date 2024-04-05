@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ContainerHeroStyled = styled.div`
+  padding: 30px;
   margin-top: 100px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +15,7 @@ export const ContainerHeroStyled = styled.div`
     color: #00c5e4;
     font-weight: bold;
     font-size: 24px;
+    text-align: center;
   }
 
   @media (min-width: 400px) {
@@ -31,6 +35,12 @@ export const ContainerHeroStyled = styled.div`
       font-size: 30px;
     }
   }
+
+  @media (min-width: 1010px) {
+    h5 {
+      font-size: 34px;
+    }
+  }
 `;
 
 export const ContainerAboutStyled = styled.div`
@@ -40,10 +50,30 @@ export const ContainerAboutStyled = styled.div`
   align-items: center;
   gap: 30px;
 
+  @media (min-width: 1010px) {
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  @media (min-width: 1080px) {
+    padding: 0px 50px;
+    margin-right: 50px;
+  }
+
+  @media (min-width: 1285px) {
+    margin-right: 80px;
+  }
+
+  @media (min-width: 1350px) {
+    margin-top: 80px;
+    margin-right: 120px;
+  }
+
   p {
     color: white;
     font-size: 15px;
     line-height: 20px;
+    text-align: justify;
   }
 
   @media (min-width: 400px) {
@@ -52,16 +82,25 @@ export const ContainerAboutStyled = styled.div`
     }
   }
 
+  @media (min-width: 450px) {
+    p {
+      padding: 0px 20px;
+    }
+  }
+
   @media (min-width: 550px) {
     p {
       font-size: 18px;
-      line-height: 22px;
+      line-height: 24px;
+      padding: 0px 30px;
     }
   }
 
   @media (min-width: 768px) {
     p {
-      line-height: 25px;
+      line-height: 27px;
+      padding: 0px 50px;
+      margin-bottom: 25px;
     }
   }
 
@@ -69,6 +108,25 @@ export const ContainerAboutStyled = styled.div`
     p {
       font-size: 20px;
       line-height: 26px;
+    }
+  }
+
+  @media (min-width: 1010px) {
+    p {
+      width: 60%;
+    }
+  }
+  @media (min-width: 1080px) {
+    p {
+      width: 65%;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: 1285px) {
+    p {
+      font-size: 22px;
+      line-height: 35px;
     }
   }
 
@@ -96,6 +154,20 @@ export const ContainerAboutStyled = styled.div`
     img {
       width: 170px;
       height: 210px;
+    }
+  }
+
+  @media (min-width: 1010px) {
+    img {
+      width: 240px;
+      height: 300px;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    img {
+      width: 280px;
+      height: 340px;
     }
   }
 `;
@@ -136,6 +208,13 @@ export const ContainerSkillsStyled = styled.div`
       font-size: 30px;
     }
   }
+
+  @media (min-width: 1010px) {
+    h4 {
+      font-size: 34px;
+      margin: 50px 0px;
+    }
+  }
 `;
 
 export const SkillsStyled = styled.div`
@@ -144,6 +223,10 @@ export const SkillsStyled = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (min-width: 1010px) {
+    gap: 70px;
+  }
 
   img {
     width: 60px;
@@ -154,6 +237,12 @@ export const SkillsStyled = styled.div`
       width: 70px;
     }
   }
+
+  @media (min-width: 1010px) {
+    img {
+      width: 80px;
+    }
+  }
 `;
 
 export const ContainerButtonStyled = styled.div`
@@ -161,7 +250,7 @@ export const ContainerButtonStyled = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 60px;
 
   @media (min-width: 450px) {
     gap: 20px;
@@ -179,6 +268,11 @@ export const ContainerButtonStyled = styled.div`
     margin-top: 70px;
     gap: 80px;
   }
+
+  @media (min-width: 1010px) {
+    margin-top: 120px;
+    gap: 90px;
+  }
 `;
 
 export const ButtonStyled = styled.button`
@@ -189,23 +283,7 @@ export const ButtonStyled = styled.button`
   border: solid black;
   font-weight: bold;
   cursor: pointer;
-
-  /* Estilos para el primer botón */
-  &:first-child {
-    background: rgb(198, 112, 30);
-    background: linear-gradient(
-      90deg,
-      rgba(198, 112, 30, 1) 0%,
-      rgba(175, 113, 53, 1) 46%,
-      rgba(139, 134, 95, 1) 64%,
-      rgba(0, 212, 255, 1) 100%
-    );
-  }
-
-  /* Estilos para el segundo botón */
-  &:last-child {
-    background-color: #00c5e4; /* Color de fondo para el segundo botón */
-  }
+  background-color: #00c5e4; /* Color de fondo para el segundo botón */
 
   @media (min-width: 400px) {
     font-size: 17px;
@@ -225,5 +303,57 @@ export const ButtonStyled = styled.button`
   @media (min-width: 900px) {
     font-size: 20px;
     width: 220px;
+  }
+
+  @media (min-width: 1010px) {
+    width: 280px;
+    padding: 15px;
+  }
+`;
+
+export const ButtonLinkStyled = styled(Link)`
+  font-size: 15px;
+  border-radius: 1rem;
+  width: 130px;
+  padding: 8px 0px;
+  border: solid black;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+
+  background: rgb(198, 112, 30);
+  background: linear-gradient(
+    90deg,
+    rgba(198, 112, 30, 1) 0%,
+    rgba(175, 113, 53, 1) 46%,
+    rgba(139, 134, 95, 1) 64%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  @media (min-width: 400px) {
+    font-size: 17px;
+    width: 150px;
+  }
+
+  @media (min-width: 550px) {
+    font-size: 18px;
+    width: 170px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    width: 190px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 20px;
+    width: 220px;
+  }
+
+  @media (min-width: 1010px) {
+    width: 280px;
+    padding: 15px;
   }
 `;

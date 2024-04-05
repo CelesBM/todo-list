@@ -15,8 +15,8 @@ const HamburgerMenu = () => {
           exit={{ x: "100%" }}
           transition={{ type: "tween", duration: 1 }}
         >
-          <p>Projects</p>
-          <p>Social</p>
+          <LinkHamburguerStyled to="/Projects">Projects</LinkHamburguerStyled>
+          <LinkHamburguerStyled to="/Social">Social</LinkHamburguerStyled>
         </ContainerHamburgerMenuStyled>
       </AnimatePresence>
     </>

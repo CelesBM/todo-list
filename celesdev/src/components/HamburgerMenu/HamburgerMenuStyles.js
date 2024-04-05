@@ -16,15 +16,8 @@ export const ContainerHamburgerMenuStyled = styled(motion.div)`
   align-items: center;
   gap: 10px;
 
-  p {
-    cursor: pointer;
-    color: #00c5e4;
-    font-weight: bold;
-    font-size: 14px;
-
-    &:hover {
-      text-shadow: 6px 3px 8px #af7135;
-    }
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 
@@ -34,5 +27,10 @@ export const LinkHamburguerStyled = styled(Link)`
   cursor: pointer;
   color: #00c5e4;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    text-shadow: 2px 2px 2px #af7135;
+  }
 `;

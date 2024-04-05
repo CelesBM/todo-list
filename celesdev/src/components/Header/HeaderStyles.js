@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HeaderContainerStyled = styled.header`
   background-color: #1d1d1d;
@@ -15,13 +16,41 @@ export const HeaderContainerStyled = styled.header`
   border-bottom: solid 0.1rem #af7135;
 
   img {
-    height: 110px;
-    width: 190px;
+    height: 70px;
+    width: 170px;
     border-radius: 2rem;
   }
+`;
 
-  .navbar {
+export const ContainerLinksStyled = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  padding: 0px 20px;
+
+  @media (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const LinkHeaderStyled = styled(Link)`
+  display: flex;
+  text-decoration: none;
+`;
+
+export const SpanStyled = styled.div`
+  cursor: pointer;
+  color: #00c5e4;
+  font-size: 16px;
+  font-weight: bold;
+
+  @media (min-width: 1010px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    text-shadow: 2px 2px 2px #af7135;
   }
 `;
 
